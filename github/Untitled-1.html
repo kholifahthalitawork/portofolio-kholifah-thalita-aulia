@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kholifah Thalita Aulia | Information Manager | Data Analyst | Researcher</title>
+    <!-- Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Konfigurasi Tema Warna Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a', // Slate 900
+                        cardBg: '#1e293b', // Slate 800
+                        accent: '#38bdf8', // Sky 400
+                        editorialMaroon: '#5c161e', // Maroon mewah mirip contoh gambar pertama
+                        editorialBeige: '#e6e2dd', // Cream mewah mirip contoh gambar kedua
+                        editorialRed: '#a32a31', // Merah bata/maroon tulisan EDUCATION
+                        editorialGreen: '#689f66', // Hijau muted untuk section MY SKILLS
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling saat klik menu navbar */
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Font bergaya poster / display tebal untuk tulisan besar */
+        .poster-font {
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-editorialMaroon/95 backdrop-blur-sm z-50 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-white font-bold text-xl tracking-wider">KHOLI<span class="text-accent">FAH.</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#About Me" class="text-white hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">About Me</a>
+                        <a href="#Personal Skills" class="text-slate-200 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Personal Skills</a>
+                        <a href="#Experience" class="text-slate-200 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#Contact" class="text-slate-200 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (EDITORIAL LAYOUT STYLE) - FIXED LAYOUT -->
+    <section id="About Me" class="relative min-h-screen bg-editorialMaroon flex flex-col justify-between pt-20 px-4 sm:px-8 overflow-hidden">
+        
+        <!-- Tulisan Besar "PORTFOLIO" di Background -->
+        <div class="absolute inset-x-0 top-24 md:top-28 text-center select-none pointer-events-none z-0 overflow-hidden">
+            <h1 class="poster-font text-[22vw] md:text-[16rem] lg:text-[18rem] text-white opacity-95 leading-none tracking-tighter uppercase whitespace-nowrap">
+                PORTOFOLIO
+            </h1>
+        </div>
+
+        <!-- Container Tengah (Foto & Nama dengan Grid 12-kolom agar ruang nama lebih lebar & sejajar lurus) -->
+        <div class="relative z-10 max-w-7xl w-full mx-auto flex-1 grid grid-cols-1 lg:grid-cols-12 items-center mt-28 md:mt-48 gap-8 px-2">
+            
+            <!-- Kolom Kiri: Kosong (Membantu posisi foto tetap berada di area tengah-kiri yang pas) -->
+            <div class="hidden lg:block lg:col-span-2"></div>
+
+            <!-- Kolom Tengah: Frame Foto Utama (z-index disesuaikan) -->
+            <div class="flex justify-center z-10 lg:col-span-4">
+                <div class="relative w-64 h-80 md:w-[320px] md:h-[420px] bg-slate-900/50 rounded-lg overflow-hidden border border-white/20 shadow-2xl group flex flex-col items-center justify-center">
+                  <div class="relative w-72 h-[360px] md:w-[380px] md:h-[480px] lg:w-[410px] lg:h-[520px] bg-slate-900/50 rounded-lg overflow-hidden border border-white/20 shadow-2xl group flex flex-col items-center justify-center transition-all duration-300">
+    <!-- Tag <img> di bawah ini diaktifkan, ganti "foto-utama-lo.jpg" dengan nama foto lo -->
+    <img src="foto-utama-lo.jpg" alt="Kholifah Thalita Aulia" class="absolute inset-0 w-full h-full object-cover">
+</div>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Nama & Role (Diberi space lebih lebar agar lurus sejajar) -->
+            <div class="text-center lg:text-left z-20 pt-8 lg:pt-0 lg:col-span-6 lg:pl-8">
+                <!-- whitespace-nowrap menjamin nama satu baris lurus di desktop -->
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-wider leading-none lg:whitespace-nowrap">
+                    Kholifah Thalita Aulia
+                </h2>
+                <p class="text-[11px] md:text-xs lg:text-sm text-slate-300 font-light tracking-[0.2em] mt-4 uppercase">
+                    Information Manager | Data Analyst | Researcher
+                </p>
+            </div>
+            
+        </div>
+
+       <!-- NEW SECTION: PROFIL / ABOUT ME (Terinspirasi gambar referensi warna hijau & krem) -->
+    <section id="profil" class="bg-editorialBeige text-stone-800 py-20 px-4 sm:px-8 border-b border-stone-800/10 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
+            
+            <!-- Sisi Kiri: Teks Raksasa, Foto Inset, dan Teks Bio (rata kanan kiri) -->
+            <div class="lg:col-span-7 flex flex-col relative pt-10">
+                
+                <!-- Teks Hijau Raksasa & Foto Inset -->
+                <div class="relative z-10 mb-10 lg:mb-16">
+                    <h2 class="poster-font text-[22vw] lg:text-[11.5rem] text-editorialGreen leading-[0.8] tracking-tight uppercase">
+                        I'M<br>KHOLIFAH<br>THALITA
+                    </h2>
+                    
+                    <!-- Foto Inset (Numpuk di atas teks persis kayak referensi) -->
+                    <div class="absolute top-0 right-[10%] md:right-[20%] lg:left-[45%] w-24 h-24 md:w-36 md:h-36 lg:w-44 lg:h-44 bg-stone-300 border-[4px] md:border-[8px] border-white shadow-xl flex flex-col items-center justify-center overflow-hidden z-20 transform -translate-y-1/4">
+                        <i class="fa-solid fa-mug-hot text-3xl text-stone-500 mb-2"></i>
+                        <p class="text-[8px] md:text-[10px] uppercase font-bold text-stone-500 tracking-wider text-center px-2">Foto Inset</p>
+                        <!-- AKTIFKAN IMG DI BAWAH JIKA ADA FOTO -->
+                        <!-- <img src="foto-inset.jpg" alt="Profile Detail" class="absolute inset-0 w-full h-full object-cover"> -->
+                    </div>
+                </div>
+
+                <!-- Teks Bio (TIDAK CAPSLOCK, RATA KANAN KIRI / JUSTIFY) -->
+                <div class="max-w-2xl">
+                    <p class="text-sm md:text-base text-stone-800 leading-loose text-justify font-medium">
+                        I am a recent Library and Information Science graduate from Universitas Padjadjaran, experienced in supporting teams and coordinating with internal and external stakeholders. I am highly motivated, adaptable, and eager to take on new challenges. My expertise lies at the intersection of information management, data analysis, and digital development. I am skilled in structured data processing and professional communication to support effective decision-making. Beyond traditional library operations, I specialize in translating complex datasets into actionable insights. I have extensive experience in designing survey instruments, analyzing data, and creating interactive visualizations using platforms such as Tableau and Looker Studio. Furthermore, my technical capabilities extend to website development, allowing me to build structured and accessible digital environments. I am deeply committed to organizing information comprehensively and delivering high-quality, data-driven solutions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sisi Kanan: Foto Utama yang Sangat Besar -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+                <div class="w-full max-w-sm lg:max-w-md h-[450px] md:h-[600px] lg:h-[700px] bg-stone-300/50 border border-stone-800/10 rounded-xl overflow-hidden shadow-2xl flex flex-col items-center justify-center group relative">
+                    <i class="fa-solid fa-person-walking text-8xl md:text-[10rem] text-stone-400 group-hover:text-stone-500 transition-colors duration-300"></i>
+                    <p class="text-xs uppercase tracking-widest font-bold text-stone-500 mt-6">Foto Besar (Standing Pose)</p>
+                    <!-- AKTIFKAN IMG DI BAWAH JIKA ADA FOTO -->
+                    <!-- <img src="foto-berdiri.jpg" alt="Kholifah" class="absolute inset-0 w-full h-full object-cover"> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tentang & Skills Section (EDITORIAL STYLE) -->
+    <section id="Personal Skills" class="bg-editorialBeige text-stone-800 py-16 px-4 sm:px-8 border-b border-stone-800/10">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Metadata Header Atas -->
+            <div class="flex justify-between text-[10px] md:text-xs tracking-[0.25em] uppercase text-stone-600 border-b border-stone-800/20 pb-4 mb-12 font-semibold">
+                <span>2026</span>
+                <span>Kholifah Thalita Aulia</span>
+                <span>Data & Information Professional</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                
+                <!-- SISI KIRI: Judul Besar & 3 Foto Preview -->
+                <div class="flex flex-col">
+                    <h2 class="poster-font text-[25vw] lg:text-[11rem] text-editorialGreen leading-[0.8] tracking-tight uppercase mb-8">
+                        MY<br>SKILLS
+                    </h2>
+                    
+                    <!-- Container 3 Foto Berjejer (Langsung jadi link ke project) -->
+                    <div class="grid grid-cols-3 gap-3 md:gap-5 w-full mt-4">
+                        
+                        <!-- Foto Preview 1: Tableau -->
+                        <a href="#" title="Lihat Project Tableau" class="aspect-[4/5] bg-editorialGreen/20 border-[4px] md:border-[6px] border-white shadow-md overflow-hidden group relative flex items-center justify-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                            <i class="fa-solid fa-chart-pie text-4xl text-editorialGreen/60 group-hover:scale-110 transition-transform"></i>
+                        </a>
+
+                        <!-- Foto Preview 2: Looker -->
+                        <a href="#" title="Lihat Project Looker" class="aspect-[4/5] bg-editorialGreen/20 border-[4px] md:border-[6px] border-white shadow-md overflow-hidden group relative flex items-center justify-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                            <i class="fa-solid fa-chart-bar text-4xl text-editorialGreen/60 group-hover:scale-110 transition-transform"></i>
+                        </a>
+
+                        <!-- Foto Preview 3: Website -->
+                        <a href="#" title="Lihat Project Website" class="aspect-[4/5] bg-editorialGreen/20 border-[4px] md:border-[6px] border-white shadow-md overflow-hidden group relative flex items-center justify-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                            <i class="fa-solid fa-browser text-4xl text-editorialGreen/60 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SISI KANAN: List Penjelasan Skill & Link Judul -->
+                <div class="flex flex-col gap-10 lg:pt-6">
+                    
+                    <!-- Skill 1 -->
+                    <div>
+                        <a href="#" class="inline-block hover:text-editorialGreen transition-colors group">
+                            <h3 class="poster-font text-2xl lg:text-3xl uppercase tracking-widest mb-2 flex items-center gap-3">
+                                TABLEAU DASHBOARD 
+                                <i class="fa-solid fa-arrow-up-right-from-square text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </h3>
+                        </a>
+                        <p class="text-[11px] md:text-[13px] text-stone-700 tracking-widest uppercase leading-relaxed font-semibold">
+                            Pembuatan visualisasi data dinamis dan storytelling data untuk mengukur performa KPI bisnis. Berpengalaman mengolah ribuan baris data untuk menemukan insight strategis yang actionable.
+                        </p>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div>
+                        <a href="#" class="inline-block hover:text-editorialGreen transition-colors group">
+                            <h3 class="poster-font text-2xl lg:text-3xl uppercase tracking-widest mb-2 flex items-center gap-3">
+                                LOOKER / BI REPORT
+                                <i class="fa-solid fa-arrow-up-right-from-square text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </h3>
+                        </a>
+                        <p class="text-[11px] md:text-[13px] text-stone-700 tracking-widest uppercase leading-relaxed font-semibold">
+                            Membangun model data dan dashboard real-time untuk memonitor metrik harian secara efisien. Membantu tim bisnis memangkas waktu pembuatan laporan manual dengan otomasi data.
+                        </p>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div>
+                        <a href="#" class="inline-block hover:text-editorialGreen transition-colors group">
+                            <h3 class="poster-font text-2xl lg:text-3xl uppercase tracking-widest mb-2 flex items-center gap-3">
+                                RESEARCH & ANALYSIS
+                                <i class="fa-solid fa-arrow-up-right-from-square text-lg opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </h3>
+                        </a>
+                        <p class="text-[11px] md:text-[13px] text-stone-700 tracking-widest uppercase leading-relaxed font-semibold">
+                            Pendekatan analitis mendalam dalam mengekstraksi dan meneliti big data untuk kebutuhan perusahaan. Terbiasa memvalidasi sumber data dan membuat model riset terstruktur.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+ <!-- EXPERIENCE SECTION - FULLY REWORKED AND CLEANED -->
+    <section id="pengalaman" class="bg-editorialBeige text-stone-800 py-20 px-4 sm:px-8 relative overflow-hidden border-b border-stone-800/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Metadata Header Atas -->
+            <div class="flex justify-between text-[10px] md:text-xs tracking-[0.25em] uppercase text-stone-600 border-b border-stone-800/20 pb-4 mb-8 font-semibold">
+                <span>AGUSTUS / 2026</span>
+                <span>Kholifah Thalita Aulia</span>
+                <span>Data & Information Professional</span>
+            </div>
+
+            <!-- Bagian Atas: Tulisan Raksasa "EXPERIENCE" & Frame Foto Model -->
+            <div class="relative flex flex-col lg:flex-row justify-between items-start lg:items-end w-full mb-12">
+                <!-- Tulisan "EXPERIENCE" ditaruh paling atas, tidak bertabrakan dengan teks bawahnya -->
+                <h1 class="poster-font text-[14vw] md:text-[10rem] lg:text-[11.5rem] text-[#a32a31] leading-none tracking-tighter uppercase select-none">
+                    EXPERIENCE
+                </h1>
+            </div>
+
+            <!-- Grid Konten Utama: Sejajar Sempurna -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+                
+                <!-- Sisi Kiri: List Pengalaman (Oct 2019 - Jan 2026) -->
+                <!-- Bersih tanpa ada tulisan membayangi di belakangnya agar legibilitas maksimal -->
+                <div class="lg:col-span-8 flex flex-col justify-start w-full">
+                    
+                    <!-- Item 1: BPJS -->
+                    <div class="border-b border-stone-800/30 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center group hover:bg-stone-800/5 px-2 transition-all duration-300">
+                        <div class="pr-4">
+                            <h3 class="font-black tracking-wider text-sm md:text-base uppercase text-stone-900">LIBRARY INTERN</h3>
+                            <p class="text-xs md:text-sm text-stone-600 tracking-wide mt-1">BPJS Ketenagakerjaan</p>
+                        </div>
+                        <span class="font-semibold tracking-wide text-xs md:text-sm text-stone-700 mt-2 sm:mt-0 whitespace-nowrap">Oct 2025 – Jan 2026</span>
+                    </div>
+
+                    <!-- Item 2: UNPAD -->
+                    <div class="border-b border-stone-800/30 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center group hover:bg-stone-800/5 px-2 transition-all duration-300">
+                        <div class="pr-4">
+                            <h3 class="font-black tracking-wider text-sm md:text-base uppercase text-stone-900">LIBRARY INTERN</h3>
+                            <p class="text-xs md:text-sm text-stone-600 tracking-wide mt-1">Faculty of Cultural Sciences Library, Universitas Padjadjaran</p>
+                        </div>
+                        <span class="font-semibold tracking-wide text-xs md:text-sm text-stone-700 mt-2 sm:mt-0 whitespace-nowrap">May 2025 – Sep 2025</span>
+                    </div>
+
+                    <!-- Item 3: BRIN -->
+                    <div class="border-b border-stone-800/30 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center group hover:bg-stone-800/5 px-2 transition-all duration-300">
+                        <div class="pr-4">
+                            <h3 class="font-black tracking-wider text-sm md:text-base uppercase text-stone-900">INTERN STAFF</h3>
+                            <p class="text-xs md:text-sm text-stone-600 tracking-wide mt-1">Perpustakaan BRIN (National Research and Innovation Agency Library)</p>
+                        </div>
+                        <span class="font-semibold tracking-wide text-xs md:text-sm text-stone-700 mt-2 sm:mt-0 whitespace-nowrap">Jan 2024 – Feb 2024</span>
+                    </div>
+
+                    <!-- Item 4: Aneka Express -->
+                    <div class="border-b border-stone-800/30 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center group hover:bg-stone-800/5 px-2 transition-all duration-300">
+                        <div class="pr-4">
+                            <h3 class="font-black tracking-wider text-sm md:text-base uppercase text-stone-900">DESKTOP PUBLISHING OPERATOR</h3>
+                            <p class="text-xs md:text-sm text-stone-600 tracking-wide mt-1">Aneka Express</p>
+                        </div>
+                        <span class="font-semibold tracking-wide text-xs md:text-sm text-stone-700 mt-2 sm:mt-0 whitespace-nowrap">Jun 2022 – Aug 2022</span>
+                    </div>
+
+                    <!-- Item 5: Kompas Gramedia -->
+                    <div class="border-b border-stone-800/30 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center group hover:bg-stone-800/5 px-2 transition-all duration-300">
+                        <div class="pr-4">
+                            <h3 class="font-black tracking-wider text-sm md:text-base uppercase text-stone-900">INTERN STAFF</h3>
+                            <p class="text-xs md:text-sm text-stone-600 tracking-wide mt-1">Kompas Gramedia</p>
+                        </div>
+                        <span class="font-semibold tracking-wide text-xs md:text-sm text-stone-700 mt-2 sm:mt-0 whitespace-nowrap">Oct 2019 – Mar 2020</span>
+                    </div>
+
+                </div>
+
+                <!-- Sisi Kanan: Foto Pose Berdiri Estetik -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end items-stretch relative">
+                    <div class="w-full max-w-sm h-[380px] md:h-[480px] lg:h-[500px] bg-stone-300/60 border border-stone-800/20 rounded-lg overflow-hidden shadow-xl flex flex-col items-center justify-center group p-6">
+                        <i class="fa-solid fa-person-dress text-6xl text-stone-500 mb-4 transition-transform group-hover:scale-110 duration-300"></i>
+                        <p class="text-xs uppercase tracking-widest font-black text-stone-700">Foto Berdiri Estetik</p>
+                        <p class="text-[10px] lowercase text-stone-500 italic mt-1">(Gaya memegang tas / memegang laptop)</p>
+                        <!-- AKTIFKAN JIKA ADA FOTO -->
+                        <!-- <img src="foto-magang.jpg" alt="Foto Magang" class="absolute inset-0 w-full h-full object-cover"> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Kontak (EDITORIAL LET'S WORK TOGETHER STYLE) -->
+    <section id="Contact" class="relative bg-editorialMaroon min-h-[90vh] flex flex-col pt-12 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-6xl mx-auto w-full flex-1 flex flex-col">
+            
+            <!-- Metadata Header Atas -->
+            <div class="flex justify-between text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/60 border-b border-white/20 pb-4 mb-8 font-semibold relative z-20">
+                <span>2026</span>
+                <span>Kholifah Thalita Aulia</span>
+                <span>Data & Information Professional</span>
+            </div>
+
+            <div class="relative flex-1 w-full flex flex-col">
+                
+                <!-- Tulisan "LET'S WORK" -->
+                <div class="text-center w-full relative z-10 pt-4 md:pt-10">
+                    <h2 class="poster-font text-[17vw] md:text-[14rem] text-white leading-[0.8] tracking-tight uppercase">
+                        GET IN
+                    </h2>
+                </div>
+
+                <!-- Tulisan "TOGETHER" -->
+                <div class="w-full relative z-10 mt-4 md:mt-2 pl-4 md:pl-20">
+                    <h3 class="poster-font text-[10vw] md:text-[5rem] text-white leading-none tracking-wide uppercase">
+                        TOUCH
+                    </h3>
+                </div>
+
+                <!-- Elemen Bawah (Kontak, Foto Utama, Inset) -->
+                <div class="relative w-full flex-1 flex items-end justify-between pb-10 mt-32 md:mt-20 z-30">
+                    
+                    <!-- Sisi Kiri: Info Kontak -->
+                    <div class="text-white text-[10px] md:text-base font-medium tracking-widest leading-relaxed z-30 pb-4 md:pb-12">
+                        <p class="mb-1">+62 89509213284</p>
+                        <p class="mb-1 uppercase">kholifahthalitawork@gmail.com</p>
+                        <p class="uppercase">https://www.linkedin.com/in/kholifah-thalita-aulia-5aa57b271/</p>
+                    </div>
+
+                    <!-- Tengah: Foto Utama (Cutout Tanpa Background) -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-56 md:w-[450px] h-64 md:h-[550px] z-20 flex items-end justify-center pointer-events-none">
+                        <div class="w-full h-full bg-slate-900/60 border border-white/20 rounded-t-full flex flex-col items-center justify-center text-center p-4 backdrop-blur-sm shadow-2xl pointer-events-auto">
+                            <i class="fa-solid fa-user-large text-5xl md:text-8xl mb-4 text-white/40"></i>
+                            <p class="text-[10px] md:text-sm uppercase font-bold tracking-widest text-white/60">Foto Model<br>(Format PNG Tanpa Background)</p>
+                        </div>
+                    </div>
+
+                    <!-- Sisi Kanan: Foto Inset dengan Border Putih -->
+                    <div class="z-30 w-32 h-20 md:w-72 md:h-44 bg-slate-800 border-[4px] md:border-[8px] border-white shadow-2xl flex items-center justify-center overflow-hidden mb-4 md:mb-12 transform translate-x-2 md:-translate-x-4">
+                        <i class="fa-solid fa-camera-retro text-2xl md:text-4xl text-white/40"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Editorial Style -->
+    <footer class="bg-[#0b1120] py-8 border-t border-white/5 relative z-40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <!-- Kiri: Copyright -->
+            <div class="text-[10px] md:text-xs text-white/40 tracking-[0.2em] uppercase font-semibold text-center md:text-left">
+                &copy; 2026 Kholifah Thalita Aulia. <br class="block md:hidden">All Rights Reserved.
+            </div>
+
+            <!-- Tengah: Social Links Minimalis -->
+            <div class="flex gap-8">
+                <!-- Ganti '#' dengan link LinkedIn lo -->
+                <a href="https://www.linkedin.com/in/kholifah-thalita-aulia-5aa57b271/" class="text-white/40 hover:text-white transition-colors duration-300" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in text-lg md:text-xl"></i>
+                </a>
+                <!-- Ganti '#' dengan link GitHub lo -->
+                <a href="#" class="text-white/40 hover:text-white transition-colors duration-300" title="GitHub">
+                    <i class="fa-brands fa-github text-lg md:text-xl"></i>
+                </a>
+                <!-- Ganti email di bawah dengan email asli lo -->
+                <a href="kholifahthalitawork@gmail.com" class="text-white/40 hover:text-white transition-colors duration-300" title="Email">
+                    <i class="fa-solid fa-envelope text-lg md:text-xl"></i>
+                </a>
+            </div>
+
+            <!-- Kanan: Back to Top -->
+            <div>
+                <a href="#About Me" class="text-[10px] md:text-xs text-white/40 hover:text-white tracking-[0.2em] uppercase font-semibold flex items-center gap-2 transition-colors">
+                    Back to top <i class="fa-solid fa-arrow-up mb-0.5"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
